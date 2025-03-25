@@ -35,8 +35,7 @@ final class LocationListViewModel: ObservableObject {
             let result = try await locationService.fetchLocations()
             locations = result
         } catch {
-            errorMessage = "Failed to load locations"
-            print("Error loading locations:", error.localizedDescription)
+            errorMessage = AppStrings.Errors.loadingFailed
         }
 
         isLoading = false

@@ -14,7 +14,7 @@ struct LocationListView: View {
         NavigationView {
             ZStack {
                 if viewModel.isLoading {
-                    ProgressView("Loading locations...")
+                    ProgressView(AppStrings.UI.loading)
                         .progressViewStyle(CircularProgressViewStyle())
                 } else if let error = viewModel.errorMessage {
                     VStack(spacing: 16) {
@@ -22,7 +22,7 @@ struct LocationListView: View {
                             .font(.headline)
                             .foregroundColor(.red)
                             .multilineTextAlignment(.center)
-                        Button("Retry") {
+                        Button(AppStrings.UI.retry) {
                             Task {
                                 await viewModel.fetchLocations()
                             }
@@ -42,7 +42,7 @@ struct LocationListView: View {
                     }
                 }
             }
-            .navigationTitle("Places")
+            .navigationTitle(AppStrings.UI.placesTitle)
         }
         .task {
             await viewModel.fetchLocations()

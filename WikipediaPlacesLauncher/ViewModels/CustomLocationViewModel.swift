@@ -16,12 +16,19 @@ final class CustomLocationViewModel: ObservableObject {
     func openWikipediaIfValid() {
         guard let lat = Double(latitudeText),
               let lon = Double(longitudeText) else {
-            alertMessage = "Please enter valid numeric coordinates."
+            alertMessage = AppStrings.Errors.invalidCoordinates
+            showAlert = true
+            return
+        }
+        
+        guard (-90...90).contains(lat), (-180...180).contains(lon) else {
+            alertMessage = AppStrings.Errors.invalidCoordinates
             showAlert = true
             return
         }
 
-        let location = Location(name: "Custom Location", latitude: lat, longitude: lon)
+
+        let location = Location(name: AppStrings.UI.customLocationTitle, latitude: lat, longitude: lon)
         if let url = DeepLinkBuilder.wikipediaURL(for: location) {
             UIApplication.shared.open(url)
         }
