@@ -24,25 +24,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A1DBC4162D9255BB00F75722 /* WikipediaPlacesLauncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WikipediaPlacesLauncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A1DBC4262D9255C000F75722 /* WikipediaPlacesLauncherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WikipediaPlacesLauncherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A1DBC4302D9255C000F75722 /* WikipediaPlacesLauncherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WikipediaPlacesLauncherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1DBC4162D9255BB00F75722 /* Places.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Places.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1DBC4262D9255C000F75722 /* PlacesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlacesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1DBC4302D9255C000F75722 /* PlacesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlacesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		A1DBC4182D9255BB00F75722 /* WikipediaPlacesLauncher */ = {
+		A1DBC4182D9255BB00F75722 /* Places */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = WikipediaPlacesLauncher;
+			path = Places;
 			sourceTree = "<group>";
 		};
-		A1DBC4292D9255C000F75722 /* WikipediaPlacesLauncherTests */ = {
+		A1DBC4292D9255C000F75722 /* PlacesTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = WikipediaPlacesLauncherTests;
+			path = PlacesTests;
 			sourceTree = "<group>";
 		};
-		A1DBC4332D9255C000F75722 /* WikipediaPlacesLauncherUITests */ = {
+		A1DBC4332D9255C000F75722 /* PlacesUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = WikipediaPlacesLauncherUITests;
+			path = PlacesUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -75,9 +75,9 @@
 		A1DBC40D2D9255BB00F75722 = {
 			isa = PBXGroup;
 			children = (
-				A1DBC4182D9255BB00F75722 /* WikipediaPlacesLauncher */,
-				A1DBC4292D9255C000F75722 /* WikipediaPlacesLauncherTests */,
-				A1DBC4332D9255C000F75722 /* WikipediaPlacesLauncherUITests */,
+				A1DBC4182D9255BB00F75722 /* Places */,
+				A1DBC4292D9255C000F75722 /* PlacesTests */,
+				A1DBC4332D9255C000F75722 /* PlacesUITests */,
 				A1DBC4172D9255BB00F75722 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -85,9 +85,9 @@
 		A1DBC4172D9255BB00F75722 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A1DBC4162D9255BB00F75722 /* WikipediaPlacesLauncher.app */,
-				A1DBC4262D9255C000F75722 /* WikipediaPlacesLauncherTests.xctest */,
-				A1DBC4302D9255C000F75722 /* WikipediaPlacesLauncherUITests.xctest */,
+				A1DBC4162D9255BB00F75722 /* Places.app */,
+				A1DBC4262D9255C000F75722 /* PlacesTests.xctest */,
+				A1DBC4302D9255C000F75722 /* PlacesUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,9 +95,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A1DBC4152D9255BB00F75722 /* WikipediaPlacesLauncher */ = {
+		A1DBC4152D9255BB00F75722 /* Places */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A1DBC43A2D9255C000F75722 /* Build configuration list for PBXNativeTarget "WikipediaPlacesLauncher" */;
+			buildConfigurationList = A1DBC43A2D9255C000F75722 /* Build configuration list for PBXNativeTarget "Places" */;
 			buildPhases = (
 				A1DBC4122D9255BB00F75722 /* Sources */,
 				A1DBC4132D9255BB00F75722 /* Frameworks */,
@@ -108,18 +108,18 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				A1DBC4182D9255BB00F75722 /* WikipediaPlacesLauncher */,
+				A1DBC4182D9255BB00F75722 /* Places */,
 			);
-			name = WikipediaPlacesLauncher;
+			name = Places;
 			packageProductDependencies = (
 			);
 			productName = WikipediaPlacesLauncher;
-			productReference = A1DBC4162D9255BB00F75722 /* WikipediaPlacesLauncher.app */;
+			productReference = A1DBC4162D9255BB00F75722 /* Places.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A1DBC4252D9255C000F75722 /* WikipediaPlacesLauncherTests */ = {
+		A1DBC4252D9255C000F75722 /* PlacesTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A1DBC43D2D9255C000F75722 /* Build configuration list for PBXNativeTarget "WikipediaPlacesLauncherTests" */;
+			buildConfigurationList = A1DBC43D2D9255C000F75722 /* Build configuration list for PBXNativeTarget "PlacesTests" */;
 			buildPhases = (
 				A1DBC4222D9255C000F75722 /* Sources */,
 				A1DBC4232D9255C000F75722 /* Frameworks */,
@@ -131,18 +131,18 @@
 				A1DBC4282D9255C000F75722 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				A1DBC4292D9255C000F75722 /* WikipediaPlacesLauncherTests */,
+				A1DBC4292D9255C000F75722 /* PlacesTests */,
 			);
-			name = WikipediaPlacesLauncherTests;
+			name = PlacesTests;
 			packageProductDependencies = (
 			);
 			productName = WikipediaPlacesLauncherTests;
-			productReference = A1DBC4262D9255C000F75722 /* WikipediaPlacesLauncherTests.xctest */;
+			productReference = A1DBC4262D9255C000F75722 /* PlacesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		A1DBC42F2D9255C000F75722 /* WikipediaPlacesLauncherUITests */ = {
+		A1DBC42F2D9255C000F75722 /* PlacesUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A1DBC4402D9255C000F75722 /* Build configuration list for PBXNativeTarget "WikipediaPlacesLauncherUITests" */;
+			buildConfigurationList = A1DBC4402D9255C000F75722 /* Build configuration list for PBXNativeTarget "PlacesUITests" */;
 			buildPhases = (
 				A1DBC42C2D9255C000F75722 /* Sources */,
 				A1DBC42D2D9255C000F75722 /* Frameworks */,
@@ -154,13 +154,13 @@
 				A1DBC4322D9255C000F75722 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				A1DBC4332D9255C000F75722 /* WikipediaPlacesLauncherUITests */,
+				A1DBC4332D9255C000F75722 /* PlacesUITests */,
 			);
-			name = WikipediaPlacesLauncherUITests;
+			name = PlacesUITests;
 			packageProductDependencies = (
 			);
 			productName = WikipediaPlacesLauncherUITests;
-			productReference = A1DBC4302D9255C000F75722 /* WikipediaPlacesLauncherUITests.xctest */;
+			productReference = A1DBC4302D9255C000F75722 /* PlacesUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -186,7 +186,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A1DBC4112D9255BB00F75722 /* Build configuration list for PBXProject "WikipediaPlacesLauncher" */;
+			buildConfigurationList = A1DBC4112D9255BB00F75722 /* Build configuration list for PBXProject "Places" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -200,9 +200,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A1DBC4152D9255BB00F75722 /* WikipediaPlacesLauncher */,
-				A1DBC4252D9255C000F75722 /* WikipediaPlacesLauncherTests */,
-				A1DBC42F2D9255C000F75722 /* WikipediaPlacesLauncherUITests */,
+				A1DBC4152D9255BB00F75722 /* Places */,
+				A1DBC4252D9255C000F75722 /* PlacesTests */,
+				A1DBC42F2D9255C000F75722 /* PlacesUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -258,12 +258,12 @@
 /* Begin PBXTargetDependency section */
 		A1DBC4282D9255C000F75722 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A1DBC4152D9255BB00F75722 /* WikipediaPlacesLauncher */;
+			target = A1DBC4152D9255BB00F75722 /* Places */;
 			targetProxy = A1DBC4272D9255C000F75722 /* PBXContainerItemProxy */;
 		};
 		A1DBC4322D9255C000F75722 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A1DBC4152D9255BB00F75722 /* WikipediaPlacesLauncher */;
+			target = A1DBC4152D9255BB00F75722 /* Places */;
 			targetProxy = A1DBC4312D9255C000F75722 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -395,9 +395,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"WikipediaPlacesLauncher/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Places/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Places;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -423,9 +424,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"WikipediaPlacesLauncher/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Places/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Places;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -515,7 +517,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A1DBC4112D9255BB00F75722 /* Build configuration list for PBXProject "WikipediaPlacesLauncher" */ = {
+		A1DBC4112D9255BB00F75722 /* Build configuration list for PBXProject "Places" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A1DBC4382D9255C000F75722 /* Debug */,
@@ -524,7 +526,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A1DBC43A2D9255C000F75722 /* Build configuration list for PBXNativeTarget "WikipediaPlacesLauncher" */ = {
+		A1DBC43A2D9255C000F75722 /* Build configuration list for PBXNativeTarget "Places" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A1DBC43B2D9255C000F75722 /* Debug */,
@@ -533,7 +535,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A1DBC43D2D9255C000F75722 /* Build configuration list for PBXNativeTarget "WikipediaPlacesLauncherTests" */ = {
+		A1DBC43D2D9255C000F75722 /* Build configuration list for PBXNativeTarget "PlacesTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A1DBC43E2D9255C000F75722 /* Debug */,
@@ -542,7 +544,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A1DBC4402D9255C000F75722 /* Build configuration list for PBXNativeTarget "WikipediaPlacesLauncherUITests" */ = {
+		A1DBC4402D9255C000F75722 /* Build configuration list for PBXNativeTarget "PlacesUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A1DBC4412D9255C000F75722 /* Debug */,
