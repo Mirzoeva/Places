@@ -11,7 +11,7 @@ import SwiftUI
 struct WikipediaPlacesLauncherApp: App {
     var body: some Scene {
         WindowGroup {
-            LocationsView()
+            PlacesView()
         }
     }
 }

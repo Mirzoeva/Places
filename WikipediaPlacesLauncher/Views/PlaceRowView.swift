@@ -1,5 +1,5 @@
 //
-//  LocationRowView.swift
+//  PlaceRowView.swift
 //  WikipediaPlacesLauncher
 //
 //  Created by Ума Мирзоева on 25/03/2025.
@@ -7,16 +7,15 @@
 
 import SwiftUI
 
-struct LocationRowView: View {
-    let location: Location
-    let onTap: (Location) -> Void
+struct PlaceRowView: View {
+    let place: Location
 
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
-            Text(location.name ?? AppStrings.UI.unnamedPlace)
+            Text(place.name ?? AppStrings.UI.unnamedPlace)
                 .font(.headline)
 
-            Text(AppStrings.Format.coordinates(lat: location.latitude, lon: location.longitude))
+            Text(AppStrings.Format.coordinates(lat: place.latitude, lon: place.longitude))
                 .font(.subheadline)
                 .foregroundColor(.secondary)
         }
@@ -29,16 +28,14 @@ struct LocationRowView: View {
         )
         .contentShape(Rectangle())
         .onTapGesture {
-            onTap(location)
+            openWikipedia()
         }
-        .accessibilityElement(children: .combine)
-        .accessibilityLabel(AppStrings.Format.accessibilityPlace(
-            name: location.name ?? AppStrings.UI.unnamedPlace,
-            lat: location.latitude,
-            lon: location.longitude
-        ))
-        .accessibilityHint(AppStrings.Accessibility.locationTapHint)
         .padding(.horizontal)
         .padding(.vertical, 4)
+    }
+
+    private func openWikipedia() {
+        guard let url = DeepLinkBuilder.wikipediaURL(for: place) else { return }
+        UIApplication.shared.open(url)
     }
 }
