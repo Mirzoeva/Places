@@ -11,11 +11,11 @@ import XCTest
 @MainActor
 final class LocationListViewModelTests: XCTestCase {
 
-    func test_fetchLocations_successfullyUpdatesLocations() async {
+    func test_fetchInitialLocations_successfullyUpdatesLocations() async {
         let mockService = MockLocationService()
-        let viewModel = LocationListViewModel(locationService: mockService)
+        let viewModel = PlacesViewModel(locationService: mockService)
 
-        await viewModel.fetchLocations()
+        await viewModel.fetchInitialLocations()
 
         XCTAssertEqual(viewModel.locations.count, 2)
         XCTAssertEqual(viewModel.locations.first?.name, "Amsterdam")
@@ -23,22 +23,22 @@ final class LocationListViewModelTests: XCTestCase {
         XCTAssertFalse(viewModel.isLoading)
     }
 
-    func test_fetchLocations_allLocationsAreReturnedIncludingNilNames() async {
+    func test_fetchInitialLocations_allLocationsAreReturnedIncludingNilNames() async {
         let mockService = MixedNameMockLocationService()
-        let viewModel = LocationListViewModel(locationService: mockService)
+        let viewModel = PlacesViewModel(locationService: mockService)
 
-        await viewModel.fetchLocations()
+        await viewModel.fetchInitialLocations()
 
         XCTAssertEqual(viewModel.locations.count, 2)
         XCTAssertEqual(viewModel.locations[0].name, "Valid City")
         XCTAssertNil(viewModel.locations[1].name)
     }
 
-    func test_fetchLocations_setsErrorOnFailure() async {
+    func test_fetchInitialLocations_setsErrorOnFailure() async {
         let brokenService = BrokenLocationService()
-        let viewModel = LocationListViewModel(locationService: brokenService)
+        let viewModel = PlacesViewModel(locationService: brokenService)
 
-        await viewModel.fetchLocations()
+        await viewModel.fetchInitialLocations()
 
         XCTAssertNotNil(viewModel.errorMessage)
         XCTAssertTrue(viewModel.locations.isEmpty)
