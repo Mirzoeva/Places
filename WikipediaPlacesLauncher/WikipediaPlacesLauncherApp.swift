@@ -11,7 +11,18 @@ import SwiftUI
 struct WikipediaPlacesLauncherApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabView {
+                LocationListView()
+                    .tabItem {
+                        Label("Places", systemImage: "map")
+                    }
+
+                CustomLocationView()
+                    .tabItem {
+                        Label("Custom", systemImage: "location.fill")
+                    }
+            }
         }
     }
 }
+
