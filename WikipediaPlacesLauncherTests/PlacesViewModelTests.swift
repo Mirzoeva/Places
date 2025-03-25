@@ -1,5 +1,5 @@
 //
-//  LocationListViewModelTests.swift
+//  PlacesViewModelTests.swift
 //  WikipediaPlacesLauncher
 //
 //  Created by Ума Мирзоева on 25/03/2025.
@@ -9,7 +9,7 @@ import XCTest
 @testable import WikipediaPlacesLauncher
 
 @MainActor
-final class LocationListViewModelTests: XCTestCase {
+final class PlacesViewModelTests: XCTestCase {
 
     func test_fetchInitialLocations_successfullyUpdatesLocations() async {
         let mockService = MockLocationService()
