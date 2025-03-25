@@ -17,19 +17,16 @@ enum AppStrings {
 
     enum UI {
         static let ok = "ok"
+        static let cancel = "Cancel"
+        static let add = "Add"
         static let loading = "Loading places..."
         static let retry = "Retry"
         static let placesTitle = "Places"
         static let name = "Name (optional)"
         static let unnamedPlace = "Unnamed place"
         static let addPlace = "Add place"
-    }
-
-    enum Accessibility {
         static let latitudeField = "Latitude"
         static let longitudeField = "Longitude"
-        static let locationTapHint = "locationTapHint"
-        static let addPlace = "Add place"
     }
     
     enum Format {
