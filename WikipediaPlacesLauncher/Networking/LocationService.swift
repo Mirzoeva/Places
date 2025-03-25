@@ -7,12 +7,20 @@
 
 import Foundation
 
+// MARK: - Protocol
+
 protocol LocationServiceProtocol {
     func fetchLocations() async throws -> [Location]
 }
 
+// MARK: - Implementation
+
 final class LocationService: LocationServiceProtocol {
-    private let endpoint = "https://raw.githubusercontent.com/abnamrocoesd/assignment-ios/main/locations.json"
+    private let endpoint: String
+
+    init(endpoint: String = AppConstants.Network.placesEndpoint) {
+        self.endpoint = endpoint
+    }
 
     func fetchLocations() async throws -> [Location] {
         guard let url = URL(string: endpoint) else {
@@ -26,6 +34,7 @@ final class LocationService: LocationServiceProtocol {
             throw URLError(.badServerResponse)
         }
 
-        return try JSONDecoder().decode(LocationResponse.self, from: data).locations
+        let decoded = try JSONDecoder().decode(LocationResponse.self, from: data)
+        return decoded.locations
     }
 }
