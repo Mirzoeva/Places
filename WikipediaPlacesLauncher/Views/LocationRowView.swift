@@ -18,6 +18,18 @@ struct LocationRowView: View {
                 .foregroundColor(.secondary)
         }
         .padding(.vertical, 4)
+        .onTapGesture {
+            openWikipedia(for: location)
+        }
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("\(location.name), latitude \(location.latitude), longitude \(location.longitude)")
+        .accessibilityHint("Opens Wikipedia Places at this location")
+    }
+
+    private func openWikipedia(for location: Location) {
+        if let url = DeepLinkBuilder.wikipediaURL(for: location) {
+            UIApplication.shared.open(url)
+        }
     }
 }
 
