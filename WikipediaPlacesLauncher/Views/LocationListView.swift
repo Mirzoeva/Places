@@ -4,6 +4,7 @@
 //
 //  Created by Ума Мирзоева on 25/03/2025.
 //
+
 import SwiftUI
 
 struct LocationListView: View {
@@ -11,12 +12,14 @@ struct LocationListView: View {
 
     var body: some View {
         NavigationView {
-            Group {
+            ZStack {
                 if viewModel.isLoading {
                     ProgressView("Loading locations...")
+                        .progressViewStyle(CircularProgressViewStyle())
                 } else if let error = viewModel.errorMessage {
-                    VStack {
+                    VStack(spacing: 16) {
                         Text(error)
+                            .font(.headline)
                             .foregroundColor(.red)
                             .multilineTextAlignment(.center)
                         Button("Retry") {
@@ -24,19 +27,25 @@ struct LocationListView: View {
                                 await viewModel.fetchLocations()
                             }
                         }
-                        .padding(.top)
+                        .buttonStyle(.borderedProminent)
                     }
                 } else {
-                    List(viewModel.locations) { location in
-                        LocationRowView(location: location)
+                    ScrollView {
+                        LazyVStack(spacing: 12) {
+                            ForEach(viewModel.locations) { location in
+                                LocationRowView(location: location)
+                                    .padding(.horizontal)
+                                    .transition(.opacity)
+                            }
+                        }
+                        .padding(.top)
                     }
                 }
             }
-            .navigationTitle("Locations")
+            .navigationTitle("Places")
         }
         .task {
             await viewModel.fetchLocations()
         }
     }
 }
-
