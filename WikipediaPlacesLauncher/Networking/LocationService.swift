@@ -12,10 +12,10 @@ protocol LocationServiceProtocol {
 }
 
 final class LocationService: LocationServiceProtocol {
-    private let url = URL(string: "https://raw.githubusercontent.com/abnamrocoesd/assignment-ios/main/locations.json")
+    private let endpoint = "https://raw.githubusercontent.com/abnamrocoesd/assignment-ios/main/locations.json"
 
     func fetchLocations() async throws -> [Location] {
-        guard let url else {
+        guard let url = URL(string: endpoint) else {
             throw URLError(.badURL)
         }
 
@@ -26,8 +26,6 @@ final class LocationService: LocationServiceProtocol {
             throw URLError(.badServerResponse)
         }
 
-        let decoded = try JSONDecoder().decode(LocationResponse.self, from: data)
-        return decoded.locations
+        return try JSONDecoder().decode(LocationResponse.self, from: data).locations
     }
 }
-
