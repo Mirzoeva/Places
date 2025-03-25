@@ -22,7 +22,7 @@ final class LocationService: LocationServiceProtocol {
         }
 
         let decoder = JSONDecoder()
-        let locations = try decoder.decode([Location].self, from: data)
-        return locations
+        let decoded = try decoder.decode(LocationResponse.self, from: data)
+        return decoded.locations
     }
 }

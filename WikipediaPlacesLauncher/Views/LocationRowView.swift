@@ -11,7 +11,7 @@ struct LocationRowView: View {
 
     var body: some View {
         VStack(alignment: .leading) {
-            Text(location.name)
+            Text(location.name ?? "Unnamed Location")
                 .font(.headline)
             Text("Lat: \(location.latitude), Lon: \(location.longitude)")
                 .font(.subheadline)
