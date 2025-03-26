@@ -119,7 +119,12 @@ If `pendingCoordinates` is set, the map will zoom to that location as soon as th
 
 The existing `zoomAndPanMapView(toLocation:)` was reused to center the map without affecting user location tracking.
 
+## 🔗 Pull Request to Wikipedia iOS App
 
+Deep linking support in the Places app is enabled through changes made in a fork of the Wikipedia iOS application.
+
+You can review the implementation here: 
+[Pull Request #1 – Mirzoeva/wikipedia-ios-deeplink](https://github.com/Mirzoeva/wikipedia-ios-deeplink/pull/1)
 
 ## 🚀 Getting Started
 
