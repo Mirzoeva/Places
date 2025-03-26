@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import WikipediaPlacesLauncher
+@testable import Places
 
 final class WikipediaPlacesLauncherTests: XCTestCase {
 

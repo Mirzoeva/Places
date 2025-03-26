@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import WikipediaPlacesLauncher
+@testable import Places
 
 @MainActor
 final class PlacesViewModelTests: XCTestCase {
@@ -15,7 +15,7 @@ final class PlacesViewModelTests: XCTestCase {
         let mockService = MockLocationService()
         let viewModel = PlacesViewModel(locationService: mockService)
 
-        await viewModel.fetchInitialLocations()
+        await viewModel.fetchLocations()
 
         XCTAssertEqual(viewModel.locations.count, 2)
         XCTAssertEqual(viewModel.locations.first?.name, "Amsterdam")
@@ -27,7 +27,7 @@ final class PlacesViewModelTests: XCTestCase {
         let mockService = MixedNameMockLocationService()
         let viewModel = PlacesViewModel(locationService: mockService)
 
-        await viewModel.fetchInitialLocations()
+        await viewModel.fetchLocations()
 
         XCTAssertEqual(viewModel.locations.count, 2)
         XCTAssertEqual(viewModel.locations[0].name, "Valid City")
@@ -38,7 +38,7 @@ final class PlacesViewModelTests: XCTestCase {
         let brokenService = BrokenLocationService()
         let viewModel = PlacesViewModel(locationService: brokenService)
 
-        await viewModel.fetchInitialLocations()
+        await viewModel.fetchLocations()
 
         XCTAssertNotNil(viewModel.errorMessage)
         XCTAssertTrue(viewModel.locations.isEmpty)

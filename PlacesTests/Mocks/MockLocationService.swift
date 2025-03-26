@@ -6,7 +6,7 @@
 //
 
 import Foundation
-@testable import WikipediaPlacesLauncher
+@testable import Places
 
 final class MockLocationService: LocationServiceProtocol {
     func fetchLocations() async throws -> [Location] {
