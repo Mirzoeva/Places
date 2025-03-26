@@ -19,7 +19,7 @@ final class PlacesViewModel: ObservableObject {
         self.locationService = locationService
     }
 
-    func fetchInitialLocations() async {
+    func fetchLocations() async {
         isLoading = true
         errorMessage = nil
 
@@ -27,7 +27,7 @@ final class PlacesViewModel: ObservableObject {
             let remote = try await locationService.fetchLocations()
             locations = remote
         } catch {
-            errorMessage = AppStrings.Errors.loadingFailed
+            errorMessage = "places.loadingFailed"
         }
 
         isLoading = false

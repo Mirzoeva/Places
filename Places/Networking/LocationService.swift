@@ -24,7 +24,7 @@ final class LocationService: LocationServiceProtocol {
 
     func fetchLocations() async throws -> [Location] {
         guard let url = URL(string: endpoint) else {
-            throw URLError(.badURL)
+            throw PError.LocationService.invalidURL
         }
 
         let (data, response) = try await URLSession.shared.data(from: url)
@@ -33,8 +33,12 @@ final class LocationService: LocationServiceProtocol {
               (200..<300).contains(httpResponse.statusCode) else {
             throw URLError(.badServerResponse)
         }
-
-        let decoded = try JSONDecoder().decode(LocationResponse.self, from: data)
-        return decoded.locations
+        
+        do {
+            let decoded = try JSONDecoder().decode(LocationResponse.self, from: data)
+            return decoded.locations
+        } catch {
+            throw PError.LocationService.decodingFailed(error)
+        }
     }
 }

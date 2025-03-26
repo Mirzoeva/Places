@@ -12,10 +12,13 @@ struct PlaceRowView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
-            Text(place.name ?? AppStrings.UI.unnamedPlace)
-                .font(.headline)
+            if let name = place.name {
+                Text(name).font(.headline)
+            } else {
+                Text("places.unnamedPlace").font(.headline)
+            }
 
-            Text(AppStrings.Format.coordinates(lat: place.latitude, lon: place.longitude))
+            Text(String(format: NSLocalizedString("format.coordinates", comment: ""), place.latitude, place.longitude))
                 .font(.subheadline)
                 .foregroundColor(.secondary)
         }
