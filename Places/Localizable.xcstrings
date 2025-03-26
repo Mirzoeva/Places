@@ -1,0 +1,241 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "error" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error"
+          }
+        }
+      }
+    },
+    "error.location_service.decoding_failed" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Decoding failed"
+          }
+        }
+      }
+    },
+    "error.location_service.fetch_failed" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Failed to load places"
+          }
+        }
+      }
+    },
+    "error.location_service.invalid_url" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Invalid URL"
+          }
+        }
+      }
+    },
+    "format.coordinates" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lat: %.4f, Lon: %.4f"
+          }
+        }
+      }
+    },
+    "invalidCoordinates" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Coordinates must be valid: -90…90 for latitude, -180…180 for longitude."
+          }
+        }
+      }
+    },
+    "invalidInput" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please enter valid numeric coordinates."
+          }
+        }
+      }
+    },
+    "loadingFailed" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Failed to load places"
+          }
+        }
+      }
+    },
+    "places.add" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add"
+          }
+        }
+      }
+    },
+    "places.addPlace" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add Places"
+          }
+        }
+      }
+    },
+    "places.cancel" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancel"
+          }
+        }
+      }
+    },
+    "places.error" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error"
+          }
+        }
+      }
+    },
+    "places.invalidNumbers" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please enter valid numeric coordinates."
+          }
+        }
+      }
+    },
+    "places.latitude_out_of_bounds" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Coordinates must be valid: -90…90 for latitude"
+          }
+        }
+      }
+    },
+    "places.latitudeField" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Latitude"
+          }
+        }
+      }
+    },
+    "places.loading" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Loading"
+          }
+        }
+      }
+    },
+    "places.longitude_out_of_bounds" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Coordinates must be valid: -180…180 for longitude."
+          }
+        }
+      }
+    },
+    "places.longitudeField" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Longitude"
+          }
+        }
+      }
+    },
+    "places.name" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Name (Optional)"
+          }
+        }
+      }
+    },
+    "places.ok" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ok"
+          }
+        }
+      }
+    },
+    "places.placesTitle" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Places"
+          }
+        }
+      }
+    },
+    "places.retry" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Retry"
+          }
+        }
+      }
+    },
+    "places.unnamedPlace" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unnamed Place"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
